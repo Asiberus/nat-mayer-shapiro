@@ -1,0 +1,233 @@
+:root {
+    --background-color: #F1EFEC;
+    --header-color: #D4C9BE;
+    --header-hover-color: #CEC1B6;
+    --header-active-color: #C6B7A9;
+
+    --text-color: #030303;
+    --text-color-light: #353535;
+    --text-color-lighter: #606060;
+    --accent-color: #0b1f35;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    font-family: Arial, "Times New Roman", sans-serif;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    background-color: var(--header-color);
+}
+
+header {
+    width: 75%;
+    display: flex;
+    align-items: stretch;
+
+    h1 {
+        margin-right: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 2.25rem;
+        white-space: nowrap;
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+    }
+
+    navbar {
+        display: flex;
+        align-items: center;
+
+        a {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 1rem;
+            text-decoration: none;
+            color: var(--text-color-light);
+        }
+
+        a:hover {
+            background-color: var(--header-hover-color);
+        }
+
+        a.active {
+            color: var(--text-color);
+            background-color: var(--header-active-color);
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    header {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        navbar {
+            /*flex-wrap: wrap;*/
+
+            a {
+                font-size: 0.75rem;
+                padding: 0.5rem;
+            }
+        }
+
+
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        width: 100%;
+        padding: 0 .5rem;
+
+        h1 {
+            white-space: normal;
+            margin-right: 0;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+footer {
+    padding: 1rem;
+
+    div {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+}
+
+div.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+
+    main {
+        width: 75%;
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.text-link {
+    text-decoration: none;
+    color: var(--text-color-light);
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--text-color);
+    }
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #111;
+    margin: 1.5rem 0;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+
+    .image-container-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &.start {
+            justify-content: flex-start;
+        }
+    }
+
+    div.image {
+        align-self: center;
+    }
+
+    img {
+        object-fit: contain;
+    }
+}
+
+.grid-images {
+    display: grid;
+    /*grid-template-columns: repeat(3, 1fr);*/
+    grid-template-columns: repeat(auto-fill, minmax(max(200px, calc((100% - 1rem) / 5)), 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+
+    margin-bottom: 5rem;
+
+    .grid-images-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        align-content: start;
+        justify-content: start;
+        text-decoration: none;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            margin-bottom: .2rem;
+        }
+
+        .grid-images-item-link {
+            color: var(--text-color-light);
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .grid-images-item-dimension {
+            color: var(--text-color-light);
+            text-align: center;
+        }
+    }
+
+    .grid-images-item:hover {
+        .grid-images-item-link {
+            color: var(--text-color);
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.text-lighter {
+    color: var(--text-color-lighter);
+}
+
+.biography-photo {
+    display: flex;
+    justify-content: center;
+}
+

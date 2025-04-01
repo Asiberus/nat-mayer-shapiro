@@ -1,0 +1,31 @@
+.series-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px;
+    grid-gap: 1rem;
+
+    .series-container-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        gap: .2rem;
+        text-decoration: none;
+
+        img {
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .series-container-item-link {
+            color: var(--text-color-light);
+        }
+    }
+
+    .series-container-item:hover {
+        .series-container-item-link {
+            color: var(--text-color);
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.index {
+    display: flex;
+    justify-content: center;
+
+    .img-link {
+        display: block;
+        margin: .5rem 0;
+    }
+
+    .index-links {
+        list-style: none;
+        text-align: center;
+
+        li {
+            padding: .2rem 0;
+        }
+    }
+}
